@@ -4,7 +4,8 @@
   "description": "Aplicacion full stack",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ./backend/src/index.js"
   },
   "author": "valenn0101",
   "license": "ISC",
