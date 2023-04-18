@@ -1,22 +1,17 @@
 const express = require('express');
 
 const router = express.Router();
+const crudController = require('../../controllers/crudControllers');
 
 router
-  .get('/', (req, res) => {
-    res.send('Hello world');
-  })
+  .get('/', crudController.getAllClubs)
 
-  .get('/show/:clubId')
+  .get('/show/:clubId', crudController.getOneClub)
 
-  .get('/createClub')
+  .post('/createClub', crudController.createNewClub)
 
-  .post('/createClub')
+  .patch('/edit/:clubId', crudController.editOneClub)
 
-  .get('/edit/:clubId')
-
-  .patch('/edit/:clubId')
-
-  .delete('/delete/:clubId');
+  .delete('/delete/:clubId', crudController.deleteOneClub);
 
 module.exports = router;
