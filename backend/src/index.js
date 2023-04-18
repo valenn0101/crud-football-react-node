@@ -1,11 +1,18 @@
 const express = require('express');
-const path = require('path');
 const v1CrudRouter = require('./v1/routes/crudRoutes');
+const methodOverride = require('method-override');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
+
 app
+  .use(methodOverride('_method'))
   .use(express.json())
   .use('/api/v1/crud/', v1CrudRouter);
 
