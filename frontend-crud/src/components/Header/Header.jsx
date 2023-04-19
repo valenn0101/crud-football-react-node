@@ -21,7 +21,7 @@ export default function Header() {
         </Link>
       </div>
       <div className={styles.btnNewTeam}>
-        <button className="btn btn-primary">New Team</button>
+        <button className="btn btn-info">New Team</button>
       </div>
     </header>
   );
