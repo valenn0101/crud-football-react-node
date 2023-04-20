@@ -1,4 +1,4 @@
-.footer {
+.pageFooter {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -7,12 +7,12 @@
     border-top: 1px solid #ddd;
   }
   
-  .footer p {
+  .pageFooter p {
     margin: 0;
     font-size: 14px;
     color: #666;
   }
-  .footer b{
+  .pageFooter b{
     font-style: italic;
   }
   
