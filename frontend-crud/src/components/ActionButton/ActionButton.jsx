@@ -1,11 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 
 const ActionButton = ({ url, type, name }) => {
   return (
-    <a href={url} className={`btn btn-outline-${type}`}>
+    <Link href={url} className={`btn btn-outline-${type}`}>
       {name}
-    </a>
+    </Link>
   );
 };
 
