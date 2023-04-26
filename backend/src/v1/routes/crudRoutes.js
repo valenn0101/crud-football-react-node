@@ -9,7 +9,7 @@ router
 
   .get('/show/:clubId', crudController.getOneClub)
 
-  .patch('/createClub', upload.single('crestLocal') , crudController.createNewClub)
+  .post('/createClub', upload.single('crestLocal') , crudController.createNewClub)
 
   .patch('/edit/:clubId', upload.single('crestLocal') , crudController.editOneClub)
 
