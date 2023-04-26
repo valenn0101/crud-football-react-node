@@ -10,10 +10,12 @@ export default function MyApp({ Component, pageProps }) {
       case '/EditPage/[id]':
         const { id } = router.query;
         return <EditPage id={id} />;
+      case '/':
+        return <HomePage />;
       default:
         return <Component {...pageProps} />;
+    }    
     }
-  };
 
   return renderPage();
 }
