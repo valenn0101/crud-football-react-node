@@ -4,6 +4,11 @@ import { Formik } from "formik";
 import axios from "axios";
 
 export default function Formulario({ clubInfo }) {
+  const submitHandler = (values) => {
+    axios.put(`https://crud-api-restful.onrender.com/api/v1/crud/edit/${clubInfo.id}`,
+    values);
+    console.log(data)
+  }
   const handleSubmit = async (values) => {
     try {
       const response = await axios.put(
@@ -32,10 +37,8 @@ export default function Formulario({ clubInfo }) {
           crestUrl: clubInfo.crestUrl,
           crestLocal: clubInfo.crestLocal,
         }}
-        onSubmit={() => {
-          console.log("Formulario enviado");
-          handleSubmit();
-        }}
+        onSubmit={(values)=> submitHandler(values)}
+
         validate={(values) => {
           const errors = {};
           if (!values.name) {
@@ -67,9 +70,7 @@ export default function Formulario({ clubInfo }) {
           <form
             className={styles.formulario}
             onSubmit={handleSubmit}
-            method="put"
             encType="multipart/form-data"
-            action={`https://crud-api-restful.onrender.com/api/v1/crud/edit/${clubInfo.id}`}
           >
             <div>
               <label htmlFor="name">Nombre</label>
