@@ -1,7 +1,8 @@
 const fs = require('fs');
 
+
 const saveToDB = (DB) => {
-  fs.writeFile('./src/database/db.json', JSON.stringify(DB, null, 2), {
+  fs.writeFile('./backend/src/database/db.json', JSON.stringify(DB, null, 2), {
     encoding: 'utf-8',
   }, (err) => {
     if (err) {

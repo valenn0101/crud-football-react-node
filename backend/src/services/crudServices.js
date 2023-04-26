@@ -25,6 +25,7 @@ const createNewClub = (newClub) => {
 
 const updateOneClub = (clubId, changes) => {
   const updatedClub = clubsInfo.updateOneClub(clubId, changes);
+  console.log('Recibi los cambios', changes);
   return updatedClub;
 };
 

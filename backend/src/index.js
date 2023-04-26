@@ -3,7 +3,7 @@ const v1CrudRouter = require('./v1/routes/crudRoutes');
 const methodOverride = require('method-override');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3030;
 
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
