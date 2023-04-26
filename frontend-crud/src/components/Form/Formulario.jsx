@@ -6,7 +6,7 @@ import axios from "axios";
 export default function Formulario({ clubInfo }) {
   const handleSubmit = async (values) => {
     try {
-      const response = await axios.post(
+      const response = await axios.put(
         `https://crud-api-restful.onrender.com/api/v1/crud/edit/${clubInfo.id}`,
         values
       );
@@ -67,7 +67,7 @@ export default function Formulario({ clubInfo }) {
           <form
             className={styles.formulario}
             onSubmit={handleSubmit}
-            method="post"
+            method="put"
             encType="multipart/form-data"
             action={`https://crud-api-restful.onrender.com/api/v1/crud/edit/${clubInfo.id}`}
           >
