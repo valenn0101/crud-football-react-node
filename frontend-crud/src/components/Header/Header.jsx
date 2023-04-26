@@ -16,7 +16,7 @@ export default function Header() {
         />
       </div>
       <div className={styles.title}>
-        <Link href="/" className={styles.link}>
+        <Link href="/HomePage" className={styles.link}>
            Premier League Teams
         </Link>
       </div>
