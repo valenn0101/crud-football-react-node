@@ -11,7 +11,7 @@ router
 
   .post('/createClub', upload.single('crestLocal') , crudController.createNewClub)
 
-  .patch('/edit/:clubId', upload.single('crestLocal') , crudController.editOneClub)
+  .post('/edit/:clubId', upload.single('crestLocal') , crudController.editOneClub)
 
   .delete('/delete/:clubId', crudController.deleteOneClub);
 
